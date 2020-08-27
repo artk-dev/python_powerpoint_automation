@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/bootstrap.min.css"
+<html>
+<body>
+	<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<form method="POST" action="/">
+		<div class="container-sm">
+			Primary site:
+			<select id='primary_drop' name='primary_drop'>
+			{% for site in sites %}
+				<option value="{{site}}"> {{site}} </option>
+			{% endfor %}
+			</select>
+		</div>
+
+		<div>
+			Secondary site:
+			<select id='secondary_drop' name='secondary_drop'>
+			{% for site in sites %}
+				<option value="{{site}}"> {{site}} </option>
+			{% endfor %}
+			</select>
+		</div>
+
+		<button type="submit" name="submit" value="submit"> Submit </button>
+	</form>
+</body>
+</html>
